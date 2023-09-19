@@ -9,7 +9,8 @@
     <h1>{{ title }}</h1>
     <nav>
       <router-link to="/">Home</router-link>
-      <router-link to="pays">Countries</router-link>
+      <router-link to="countries">Countries</router-link>
+      <router-link :to="{name: 'about'}">About</router-link>
     </nav>
     <div id="view-content">
       <router-view />
@@ -17,7 +18,7 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   h1 {
     font-weight: bold;
   }
@@ -26,18 +27,16 @@
     color: red;
   }
 
-  a {
-    text-decoration: none;
-    color: #42b983;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
   nav {
     display: flex;
     gap: 20px;
+    a {
+      text-decoration: none;
+      color: #42b983;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   #view-content {
