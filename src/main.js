@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Countries from "@/views/Countries.vue";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
+import CountriesDetails from "@/views/CountriesDetails.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,13 +16,19 @@ const router = createRouter({
         },
         {
             path: '/countries',
-            component: Countries
+            component: Countries,
+            name: 'countries'
+        },
+        {
+            path: '/countries/:id',
+            component: CountriesDetails,
+            name: 'countries-details'
         },
         {
             path: '/about',
             component: About,
             name: 'about'
-        }
+        },
     ]
 })
 const app = createApp(App)
