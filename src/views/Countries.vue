@@ -13,12 +13,14 @@ onMounted(async () => {
 
 <template>
   <h2>World's Countries List</h2>
-    <div v-for="country in data">
-      <CountryCard :countryName="country.name.common" :countryOfficialName="country.capital" :countryFlag="country.flag"/>
-      <router-link :to="{name: 'countries-details', params: {id: country.name.common}}">Details</router-link>
+    <div id="countries-wrapper">
+      <CountryCard v-for="country in data" :countryName="country.name.common" :countryOfficialName="country.name.official" :countryRegion="country.region" :countryFlag="country.flags.svg"/>
     </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+  #countries-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 </style>

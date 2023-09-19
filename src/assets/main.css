@@ -11,3 +11,12 @@ a {
         text-decoration: underline;
     }
 }
+
+i {
+    margin-left: 5px;
+    transition: margin-left 0.1s ease-in-out;
+}
+
+a:hover i {
+    margin-left: 10px;
+}
