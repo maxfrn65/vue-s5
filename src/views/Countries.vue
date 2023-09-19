@@ -1,13 +1,13 @@
 <script setup>
 
+import CountryCard from "@/components/CountryCard.vue";
 </script>
 
 <template>
   <h2>World's Countries List</h2>
-  <div v-for="n in 10">
-    <h3>Country {{ n }}</h3>
-    <router-link :to="{name: 'countries-details', params: {id: n}}">Voir les détails</router-link>
-  </div>
+    <CountryCard country="France" capital="Paris" />
+    <CountryCard country="Italy" capital="Rome" />
+    <CountryCard country="Spain" capital="Madrid" />
 </template>
 
 <style scoped>
