@@ -1,14 +1,16 @@
 <script setup>
 defineProps({
-  country: String,
-  capital: String
+  countryName: String,
+  countryOfficialName: String,
+  countryFlag: String,
 })
 </script>
 
 <template>
   <div>
-    <h2>{{ country }}</h2>
-    <h3>{{ capital }}</h3>
+    <h3>{{ countryName }}</h3>
+    <h4>{{ countryOfficialName }}</h4>
+    <img :src="countryFlag" :alt="countryName + ' ' + 'flag'" />
   </div>
 </template>
 

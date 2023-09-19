@@ -1,6 +1,6 @@
 <script setup>
   import Button from "@/components/Button.vue";
-  const title = "Welcome to Vuejs 3";
+  const title = "Welcome to Vue.js 3";
   const paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.";
 </script>
 
