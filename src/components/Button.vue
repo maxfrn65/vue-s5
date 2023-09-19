@@ -13,7 +13,7 @@
     color: white;
     text-decoration: none;
     background-color: #42b983;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 10px;
     font-weight: bold;
   }

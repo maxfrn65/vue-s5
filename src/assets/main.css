@@ -6,8 +6,17 @@ body {
 
 a {
     text-decoration: none;
-    color: #42b983;
+    color: #42b883;
     &:hover {
         text-decoration: underline;
     }
+}
+
+i {
+    margin-left: 5px;
+    transition: margin-left 0.1s ease-in-out;
+}
+
+a:hover i {
+    margin-left: 10px;
 }

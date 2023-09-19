@@ -1,15 +1,26 @@
 <script setup>
-
 import CountryCard from "@/components/CountryCard.vue";
+import { onMounted, ref } from "vue";
+import axios from "axios";
+
+let data = ref('');
+
+onMounted(async () => {
+  const response = await axios.get("https://restcountries.com/v3.1/all");
+  data.value = response.data;
+});
 </script>
 
 <template>
   <h2>World's Countries List</h2>
-    <CountryCard country="France" capital="Paris" />
-    <CountryCard country="Italy" capital="Rome" />
-    <CountryCard country="Spain" capital="Madrid" />
+    <div id="countries-wrapper">
+      <CountryCard v-for="country in data" :countryName="country.name.common" :countryOfficialName="country.name.official" :countryRegion="country.region" :countryFlag="country.flags.svg"/>
+    </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+  #countries-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 </style>

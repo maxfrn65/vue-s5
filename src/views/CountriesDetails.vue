@@ -5,7 +5,7 @@ const id = route.params.id;
 </script>
 
 <template>
-  <h2>Country {{ id }}</h2>
+  <h2>{{ id }}</h2>
 </template>
 
 <style scoped>
