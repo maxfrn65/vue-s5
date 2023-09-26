@@ -6,7 +6,7 @@ import axios from "axios";
 let data = ref('');
 
 onMounted(async () => {
-  const response = await axios.get("https://restcountries.com/v3.1/all");
+  const response = await axios.get("countries.json");
   data.value = response.data;
 });
 </script>
@@ -14,7 +14,7 @@ onMounted(async () => {
 <template>
   <h2>World's Countries List</h2>
     <div id="countries-wrapper">
-      <CountryCard v-for="country in data" :countryName="country.name.common" :countryOfficialName="country.name.official" :countryRegion="country.region" :countryFlag="country.flags.svg"/>
+      <CountryCard v-for="(country) in data" :countriesData="country"/>
     </div>
 </template>
 

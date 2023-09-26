@@ -14,7 +14,7 @@
           <router-link to="countries">Countries</router-link>
           <router-link :to="{name: 'about'}">About</router-link>
         </nav>
-        <Button />
+        <Button text="Docs"/>
       </div>
     </header>
     <div id="view-content">
