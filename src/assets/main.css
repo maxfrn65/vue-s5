@@ -14,9 +14,9 @@ a {
 
 i {
     margin-left: 5px;
-    transition: margin-left 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
-a:hover i {
+.link:hover i {
     margin-left: 10px;
 }
