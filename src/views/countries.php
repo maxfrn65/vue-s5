@@ -8,6 +8,10 @@ $result = curl_exec($query);
 if (curl_error($query)) {
     die("Error: " . curl_error($result));
 } else {
-    curl_close($query);
     file_put_contents("countries.json", $result);
+    $data = json_decode($result, true);
+    foreach ($data as $item) {
+        echo $item["flags"]["svg"] . "<br>";
+    }
+    curl_close($query);
 }
