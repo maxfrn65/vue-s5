@@ -20,9 +20,10 @@ const router = createRouter({
             name: 'countries'
         },
         {
-            path: '/countries/:id',
+            path: '/countries/:country',
             component: CountriesDetails,
-            name: 'countries-details'
+            name: 'countries-details',
+            props: true
         },
         {
             path: '/about',
