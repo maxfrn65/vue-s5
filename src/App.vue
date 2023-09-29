@@ -13,6 +13,7 @@
           <router-link to="/">Home</router-link>
           <router-link to="countries">Countries</router-link>
           <router-link :to="{name: 'about'}">About</router-link>
+          <router-link to="recherche"><i class="fa-solid fa-magnifying-glass"></i></router-link>
         </nav>
         <Button text="Docs"/>
       </div>

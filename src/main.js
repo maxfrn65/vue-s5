@@ -6,6 +6,7 @@ import Countries from "@/views/Countries.vue";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import CountriesDetails from "@/views/CountriesDetails.vue";
+import Search from "@/components/Search.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +31,10 @@ const router = createRouter({
             component: About,
             name: 'about'
         },
+        {
+            path: '/search',
+            component: Search
+        }
     ]
 })
 const app = createApp(App)
