@@ -26,10 +26,14 @@ onMounted(async () => {
       <img :src="data.flags?.svg" alt="">
       <div id="title-container">
         <h1>{{ data.name?.common }}</h1>
-        <h2>{{ data.name?.official }}</h2>
-        <h2>{{ data.region }}</h2>
+        <h2>Official Name: {{ data.name?.official }}</h2>
+        <h2>Continent: {{ data.region }}</h2>
+        <h2>Capital: {{ data.capital }}</h2>
       </div>
-      <hr>
+    </div>
+    <hr>
+    <div>
+
     </div>
   </div>
 </template>
@@ -37,6 +41,9 @@ onMounted(async () => {
 <style scoped lang="scss">
   #container {
     padding: 100px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
 
   #summup-container {
@@ -51,6 +58,6 @@ onMounted(async () => {
 
   hr {
     width: 100%;
-    border: #9b9b9b 0.5px solid;
+    border: #d7d7d7 0.5px solid;
   }
 </style>
