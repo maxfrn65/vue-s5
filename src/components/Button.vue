@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <a href="https://vuejs.org/guide/introduction.html" target="_blank">{{ text }}<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  <a href="https://vuejs.org/guide/introduction.html" target="_blank">{{ text }}<i class="icon-btn fa-solid fa-arrow-up-right-from-square"></i></a>
 </template>
 
 <style scoped>

@@ -4,11 +4,11 @@ defineProps(['countriesData'])
 
 <template>
   <div id="country-card-container">
-    <img :src="countriesData.flags.svg" :alt="countryName + ' ' + 'flag'" />
+    <img :src="countriesData.flags.svg" :alt="countriesData.name.common + ' ' + 'flag'" />
     <div id="country-info-container">
       <h3>{{ countriesData.name.common }}</h3>
       <h4>{{ countriesData.name.official }}</h4>
-      <router-link class="link" :to="{name: 'countries-details', params: {id: countriesData.name.common}}">Go to Details <i class="fa-solid fa-arrow-right fa-xs"></i></router-link>
+      <router-link class="link" :to="{name: 'countries-details', params: {country: countriesData.name.common}}">Go to Details <i class="icon-btn fa-solid fa-arrow-right fa-xs"></i></router-link>
     </div>
   </div>
 </template>

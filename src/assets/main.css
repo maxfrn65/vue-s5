@@ -2,6 +2,11 @@
 
 body {
     margin: 20px;
+    background-color: #fafafa;
+}
+
+h1 {
+    font-weight: bold;
 }
 
 a {
@@ -12,7 +17,7 @@ a {
     }
 }
 
-i {
+.icon-btn {
     margin-left: 5px;
     transition: all 0.1s ease-in-out;
 }
