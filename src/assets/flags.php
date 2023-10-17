@@ -14,9 +14,10 @@ if (curl_error($query)) {
         $flagUrl = $item["flags"]["svg"];
         $fileInfo = pathinfo($flagUrl);
         $extension = $fileInfo["extension"];
-        $fileName = $item["cca2"].'.'.$extension;
+        $fileName = $item["cca2"] . '.' . $extension;
         $image = file_get_contents($flagUrl);
-        file_put_contents("public/imgs/".$fileName, $image);
+        file_put_contents("public/imgs/" . $fileName, $image);
     }
-
+}
 ?>
+
