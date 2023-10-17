@@ -1,47 +1,54 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+  import Button from "@/components/Button.vue";
+  const title = "Welcome to Vue.js 3";
+  const paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div id="app">
+    <header>
+      <h1>{{ title }}</h1>
+      <div id="inner-header">
+        <nav>
+          <router-link to="/">Home</router-link>
+          <router-link to="countries">Countries</router-link>
+          <router-link :to="{name: 'about'}">About</router-link>
+          <router-link to="recherche"><i class="fa-solid fa-magnifying-glass"></i></router-link>
+        </nav>
+        <Button text="Docs"/>
+      </div>
+    </header>
+    <div id="view-content">
+      <router-view />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<style scoped lang="scss">
+  h1 {
+    font-weight: bold;
+  }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+  .red {
+    color: red;
+  }
 
-@media (min-width: 1024px) {
   header {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    align-items: center;
+    justify-content: space-between;
+    #inner-header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
+  nav {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    gap: 20px;
   }
-}
+
+  #view-content {
+    margin-top: 20px;
+  }
 </style>
